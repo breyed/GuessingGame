@@ -6,6 +6,7 @@
       "size" : "20x20"
     },
     {
+      "filename" : "Logo60.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
@@ -31,6 +32,7 @@
       "size" : "40x40"
     },
     {
+      "filename" : "Logo120.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
@@ -89,6 +91,7 @@
       "size" : "83.5x83.5"
     },
     {
+      "filename" : "StoreIcon.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
