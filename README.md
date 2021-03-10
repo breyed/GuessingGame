@@ -1,2 +1,5 @@
-# GuessingGame
-Guess the number and earn a flying cat!
+# Guessing Game
+Guess the number and win a flying cat!
+
+* Coding: **Eliana**
+* Artwork: **Ethan**

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F97ABC324D5F90300A00803 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F97ABC224D5F90300A00803 /* Splash.swift */; };
 		3F97ABC524D5FBB100A00803 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F97ABC424D5FBB100A00803 /* Main.swift */; };
+		3FD64A0E25F85DF9006F0F04 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3FD64A0D25F85DF9006F0F04 /* README.md */; };
 		3FD968D624D323D100891BCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD968D524D323D100891BCE /* AppDelegate.swift */; };
 		3FD968D824D323D100891BCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD968D724D323D100891BCE /* SceneDelegate.swift */; };
 		3FD968DA24D323D100891BCE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD968D924D323D100891BCE /* Game.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		3F97ABC224D5F90300A00803 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		3F97ABC424D5FBB100A00803 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		3FD64A0D25F85DF9006F0F04 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3FD968D224D323D100891BCE /* guessing game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "guessing game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD968D524D323D100891BCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FD968D724D323D100891BCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +46,7 @@
 		3FD968C924D323D100891BCE = {
 			isa = PBXGroup;
 			children = (
+				3FD64A0D25F85DF9006F0F04 /* README.md */,
 				3FD968D424D323D100891BCE /* guessing game */,
 				3FD968D324D323D100891BCE /* Products */,
 			);
@@ -141,6 +144,7 @@
 			files = (
 				3FD968E224D323D200891BCE /* LaunchScreen.storyboard in Resources */,
 				3FD968DF24D323D200891BCE /* Preview Assets.xcassets in Resources */,
+				3FD64A0E25F85DF9006F0F04 /* README.md in Resources */,
 				3FD968DC24D323D200891BCE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
