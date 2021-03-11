@@ -8,9 +8,15 @@ struct Game: View {
 	@State var guess = ""
 	@State var correct = false
 	@State var hint = ""
+	@State var level = 0
 	
 	var body: some View {
 		VStack {
+			Text("Level \(level)")
+				.font(.largeTitle)
+				.fontWeight(.thin)
+				.foregroundColor(Color.gray)
+				.padding(.bottom, 50.0)
 			Text("I'm thinking of a number from \(minAnswer) to \(maxAnswer)")
 				.padding(.bottom, 200.0)
 
@@ -53,12 +59,16 @@ struct Game: View {
 	}
 	
 	private func startNewGame() {
-		switch maxAnswer {
-		case 0: maxAnswer = 10
-		case 10: maxAnswer = 25
-		case 400: maxAnswer = 1000
-		case 1000: ()
-		default: maxAnswer = maxAnswer * 2
+		level = level + 1
+		
+		if level % 3 == 1 {
+			switch maxAnswer {
+			case 0: maxAnswer = 10
+			case 10: maxAnswer = 25
+			case 400: maxAnswer = 1000
+			case 1000: ()
+			default: maxAnswer = maxAnswer * 2
+			}
 		}
 	
 		minAnswer = maxAnswer >= 100 ? maxAnswer / 2 : 1
