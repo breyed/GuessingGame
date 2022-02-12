@@ -9,7 +9,7 @@ struct Game: View {
 	@State var correct = false
 	@State var hint = ""
 	@State var level = 0
-	
+
 	var body: some View {
 		VStack {
 			Text("Level \(level)")
@@ -23,14 +23,14 @@ struct Game: View {
 			if correct {
 				Button(action: startNewGame) {
 					Text("Next").font(.system(size: 40)).bold()
-					Image(systemName: "arrowshape.turn.up.right.fill").resizable().frame(width: 50, height: 30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+					Image(systemName: "arrowshape.turn.up.right.fill").resizable().frame(width: 50, height: 30, alignment: /*@START_MENU_TOKEN@*/ .center/*@END_MENU_TOKEN@*/)
 				}
 				Image("FlyingCat")
 					.resizable()
 					.aspectRatio(contentMode: .fit)
 					.frame(height: 200, alignment: .center)
 			} else {
-				Text(hint)
+				Text(hint).animation(.easeInOut)
 				HStack {
 					TextField("Guess", text: $guess)
 						.frame(width: 100)
@@ -47,20 +47,26 @@ struct Game: View {
 	}
 
 	private func checkGuess() {
-		guard let guessNumber = Int(guess) else { return }
-		if answer == guessNumber {
-			correct = true
-			hint = ""
-		} else if answer < guessNumber {
-			hint = "Too high"
-		} else if answer > guessNumber {
-			hint = "Too low"
+		hint = ""
+		DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+			guard let guessNumber = Int(guess) else {
+				hint = "numbeer please tasty🍻"
+				return
+			}
+			if answer == guessNumber {
+				correct = true
+				hint = ""
+			} else if answer < guessNumber {
+				hint = "Too high"
+			} else if answer > guessNumber {
+				hint = "Too low"
+			}
 		}
 	}
-	
+
 	private func startNewGame() {
 		level = level + 1
-		
+
 		if level % 3 == 1 {
 			switch maxAnswer {
 			case 0: maxAnswer = 10
@@ -70,7 +76,7 @@ struct Game: View {
 			default: maxAnswer = maxAnswer * 2
 			}
 		}
-	
+
 		minAnswer = maxAnswer >= 100 ? maxAnswer / 2 : 1
 		answer = Int.random(in: minAnswer ... maxAnswer)
 		guess = ""
