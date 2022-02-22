@@ -303,6 +303,7 @@
 				DEVELOPMENT_TEAM = 8H3C34LP64;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "guessing game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +324,7 @@
 				DEVELOPMENT_TEAM = 8H3C34LP64;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "guessing game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

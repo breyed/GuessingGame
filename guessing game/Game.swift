@@ -25,10 +25,20 @@ struct Game: View {
 					Text("Next").font(.system(size: 40)).bold()
 					Image(systemName: "arrowshape.turn.up.right.fill").resizable().frame(width: 50, height: 30, alignment: /*@START_MENU_TOKEN@*/ .center/*@END_MENU_TOKEN@*/)
 				}
-				Image("FlyingCat")
-					.resizable()
-					.aspectRatio(contentMode: .fit)
-					.frame(height: 200, alignment: .center)
+				AsyncImage(url: URL(string: "https://cataas.com/cat/says/hello?size=150&color=teal")!) { randomCat in
+					randomCat
+						.resizable()
+						.aspectRatio(contentMode: .fit)
+						.frame(height: 200, alignment: .center)
+				} placeholder: {
+					ZStack(alignment: .bottom) {
+						Image("FlyingCat")
+							.resizable()
+							.aspectRatio(contentMode: .fit)
+							.frame(height: 200, alignment: .center)
+						Text("More cats coming also cats crossing").foregroundColor(.white)
+					}
+				}
 			} else {
 				Text(hint).animation(.easeInOut)
 				HStack {
@@ -50,7 +60,7 @@ struct Game: View {
 		hint = ""
 		DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
 			guard let guessNumber = Int(guess) else {
-				hint = "numbeer please tasty🍻"
+				hint = "number please tasty🍻"
 				return
 			}
 			if answer == guessNumber {
